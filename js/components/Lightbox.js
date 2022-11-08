@@ -1,12 +1,15 @@
 export default {
     name: 'TheLightBoxComponent',
 
-    props: ['item'],
+    props: ['hero'],
 
-    emits: ['closelightbox'],
+    // emits: ['closelb'],
 
     template: `
     <section class="lightbox">
+
+        <pre> {{ hero }} </pre>
+
         <img @click="closeLB" src="images/closeIcon.png" class="lightbox_close">
         <!-- hero image on the left, text on the right -->
         <!-- her image is a background image -->
@@ -24,7 +27,8 @@ export default {
 
     methods: {
         closeLB(){
-            this.$emit('closelightbox');
+            // pas the individual hero object back to the main wm instance
+            this.$emit('closelb');
         }
     }
 }

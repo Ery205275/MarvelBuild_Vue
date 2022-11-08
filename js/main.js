@@ -17,16 +17,18 @@ import LightBox from './components/Lightbox.js';
         data() {
             return {
                 heroData: {},
-                lbData: {}
+                lbData: {},
+                showLightBox: false,
             }
         },
         components: {
             theherothumb: HeroThumb,
-            thelightbox: LightBox
+            lightbox: LightBox
         },
         methods:{
-            loadLightbox(hero) {
-                this.lbData = hero;
+            loadLightbox(item) {
+                this.lbData = item;
+                this.showLightBox = true;
             }
         }
     }).mount('#app')

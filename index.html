@@ -34,7 +34,9 @@
         </article>
 
         <!-- custom light box -->
-        <thelightbox></thelightbox>
+        
+        <lightbox @closelb="this.showLightBox = false" v-if="showLightBox" :hero="lbData"></lightbox>
+        
         <!-- end lightbox -->
     </main>
     <!-- make this a sticky footer so it's always at the bottom-->
